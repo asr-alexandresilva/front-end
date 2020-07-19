@@ -1,0 +1,154 @@
+body {
+	min-height: 100vh;
+	background-color: rgb(255, 255, 255);
+	overflow: hidden;
+}
+
+/* formata logo */
+
+.logo img {
+	max-width: 50px;
+}
+
+/* ---------------------- */
+
+/* menu desktop */
+nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(41, 41, 41);
+	box-shadow: 0px 3px 5px rgb(0 0 0 / 53%);
+	padding: 10px;
+}
+
+.nav_desktop {
+	position: relative;
+	display: flex;
+}
+
+nav a {
+	position: relative;
+	padding: 0 20px;
+	font-size: 1.5em;
+	color: rgb(255, 255, 255);
+	text-decoration: none !important;
+	outline: none;
+	transition: all 0.5s;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+	color: rgba(255, 255, 255, 0.411);
+}
+
+nav #marker {
+	position: absolute;
+	left: 0;
+	height: 4px;
+	width: 0;
+	background: rgb(202, 17, 17);
+	bottom: -8px;
+	transition: 0.5s;
+	border-radius: 4px;
+}
+
+nav #marker.item_menu_active {
+	background: rgba(202, 17, 17, 0.301);
+}
+/* ---------------------- */
+/* setas menu hamburguer */
+
+.toggle {
+	position: relative;
+	display: none;
+	z-index: 999;
+}
+
+.toggle span {
+	position: relative;
+	width: 36px;
+	height: 4px;
+	background: #fff;
+	display: block;
+	margin-bottom: 8px;
+	transition: .5s;
+}
+
+.toggle span:nth-child(1) {
+	transform-origin: left;
+}
+
+.toggle span:nth-child(2) {
+	transform-origin: center;
+}
+
+.toggle span:nth-child(3) {
+	transform-origin: left;
+}
+
+.toggle.active span:nth-child(1) {
+	transform: rotate(45deg);
+	left: 2px;
+}
+
+.toggle.active span:nth-child(2) {
+	transform: rotate(315deg);
+	right: 3px;
+}
+
+.toggle.active span:nth-child(3) {
+	transform: scaleX(0);
+}
+
+/* ---------------------- */
+/* menu mobile */
+.menu_mobile{
+	display: none;
+}
+/* ---------------------- */
+
+/**************************/
+
+/* Extra small devices (portraint phones) */
+
+@media (max-width:575.98px) {
+	/*ou seja de 0 até 575.99px*/
+	/*de 575.98 para baixo*/
+	/* menu mobile */
+	.nav_desktop {
+		display: none;
+	}
+	.toggle{
+		display: block;
+	}
+	.menu_mobile{
+		position: fixed;
+		top: 0;
+		min-height: 100vh;
+		min-width: 100vh;
+		background-color: rgb(53, 53, 53);
+	}
+	.menu_mobile ul{
+		height: 10vh;
+		/* width: 100vh; */
+		padding-top: 60px;
+	}
+	.menu_mobile li{
+		list-style: none;
+		color: #fff;
+		width: 100vw;
+		/* background-color: blue; */
+		text-align: center;
+		transition: all 0.5s;
+	}
+	.menu_mobile li:hover{
+		background-color: rgb(199, 30, 30);
+	}
+	.menu_mobile li a{
+		color: #fff;
+		display: block;
+		padding: 20px;
+		text-align: center;
+	}
+}
