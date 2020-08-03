@@ -1,0 +1,73 @@
+body {
+	min-height: 100vh;
+	background-image: url(../img/back3.jpg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.container_pesquisa {
+	position: relative;
+	width: 100%;
+}
+
+.icon_pesquisa_avancada {
+	position: absolute;
+	top: 16px;
+	left: 14px;
+	color: rgb(2, 76, 195);
+}
+
+.ipt_pesquisa_avancada {
+	outline: none;
+	border: none;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.37);
+	width: 100%;
+	padding: 10px;
+	padding-left: 40px;
+	border-radius: 50px;
+	transition: all 0.8s;
+	border: 2px solid rgba(255, 0, 0, 0);
+}
+
+.ipt_pesquisa_avancada:focus {
+	box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.171);
+	border: 2px solid rgb(2, 76, 195);
+}
+
+.lista_botoes_filtro_pesquisa {
+	display: flex;
+	margin-top: 10px;
+}
+
+.lista_botoes_filtro_pesquisa .btn_filtro_pesquisa {
+	margin: 5px;
+	cursor: pointer;
+	border-radius: 50px;
+	box-shadow: 0px 1px 3px #00000054;
+	transition: all 0.5s;
+	background-color: #fff;
+}
+.lista_botoes_filtro_pesquisa .btn_filtro_pesquisa:hover{
+	transform: translateY(-2px);
+	box-shadow: 0px 2px 8px #0000003a;
+}
+.lista_botoes_filtro_pesquisa .btn_filtro_pesquisa label{
+	margin: 0;
+	cursor: pointer;
+	padding: 10px 0;
+	padding-right: 10px;
+	color: rgb(2, 76, 195);
+}
+.lista_botoes_filtro_pesquisa .btn_filtro_pesquisa input{
+	appearance: none;
+	opacity: 0;
+}
+.lista_botoes_filtro_pesquisa .btn_filtro_pesquisa img{
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	margin-top: -2px;
+}
